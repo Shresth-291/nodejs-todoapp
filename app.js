@@ -14,6 +14,7 @@ config({
 //using MiddleWares
 app.use(express.json())
 app.use(cookieParser())
+//cross origin resource sharing(mtlb frontend(dusre URL) se data fetch krne k liye)
 app.use(cors({
     origin: [process.env.FRONTEND_URL],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
